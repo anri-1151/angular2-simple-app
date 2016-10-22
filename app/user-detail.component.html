@@ -1,0 +1,21 @@
+<div *ngIf="user">
+    <h2>{{user.userName}} details!</h2>
+    <div><label>pid: </label>{{user.pid}}</div>
+    <div>
+        <label>firstName: </label>
+        <input [(ngModel)]="user.firstName" placeholder="firstName"/>
+    </div>
+    <div>
+        <label>lastName: </label>
+        <input [(ngModel)]="user.lastName" placeholder="lastName"/>
+    </div>
+    <div>
+        <label>password: </label>
+        <input [(ngModel)]="user.password" placeholder="password"/>
+    </div>
+    <div>
+        <label>created: </label>
+        <input [(ngModel)]="user.created" placeholder="created"/>
+    </div>
+    <button (click)="goBack()">Back</button>
+</div>

@@ -1,0 +1,15 @@
+<h2>My Users (FROM HTTP REQUEST)</h2>
+<ul class="users">
+    <li *ngFor="let user of users"
+        [class.selected]="user === selectedUser"
+        (click)="onSelect(user)">
+        <span class="badge">{{user.pid}}</span> {{user.firstName + ' ' + user.lastName}}
+    </li>
+</ul>
+<!--<my-hero-detail [hero]="selectedHero"></my-hero-detail>-->
+<div *ngIf="selectedUser">
+    <h2>
+        {{selectedUser.firstName + ' ' + selectedUser.lastName | uppercase}} is my user
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>
